@@ -1,9 +1,6 @@
 package com.back;
 
-import com.back.config.JdbcTemplateV1Config;
-import com.back.config.JdbcTemplateV2Config;
-import com.back.config.JdbcTemplateV3Config;
-import com.back.config.MemoryConfig;
+import com.back.config.*;
 import com.back.repository.ItemRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,9 +9,10 @@ import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Profile;
 
 //@Import(MemoryConfig.class)
-//@Import(JdbcTemplateV1Config.class)
-//@Import(JdbcTemplateV2Config.class)
-@Import(JdbcTemplateV3Config.class)
+// @Import(JdbcTemplateV1Config.class)
+// @Import(JdbcTemplateV2Config.class)
+// @Import(JdbcTemplateV3Config.class)
+@Import(MyBatisConfig.class)
 @SpringBootApplication(scanBasePackages = "com.back.web")
 public class BackApplication {
 
